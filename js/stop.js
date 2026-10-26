@@ -79,7 +79,7 @@ function changeState(state) {
 function saveBestScore(score) {
     const savedScore = localStorage.getItem("stopBestScore");
 
-    if (savedScore === null || Math.abs(score) < Number(savedScore)) {
+    if (savedScore === null || Math.abs(score) < Math.abs(Number(savedScore))) {
         localStorage.setItem("stopBestScore", score);
 
     }
