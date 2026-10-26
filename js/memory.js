@@ -187,6 +187,7 @@ answerButton.addEventListener("click", function () {
   } else {
     iscorrect = false;
     correntLevel = 1;
+    gameStart();
     min = 10 ** (getLevelSettings(correntLevel)["keta"] - 1);
     max = 10 ** getLevelSettings(correntLevel)["keta"] - 1;
     changeState("hide");
