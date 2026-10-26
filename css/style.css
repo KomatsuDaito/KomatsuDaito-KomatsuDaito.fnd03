@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.hero {
+    position: relative;
+    width: 1000px;
+    max-width: 90%;
+    margin: 50px auto 0;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 0;
+    white-space: nowrap;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #5d7098;
+}
+
+/* ゲーム一覧 */
+#menu {
+    padding: -30px 4% 80px;
+}
+
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* カード共通 */
+.game-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    padding: 20px 18px 20px;
+    border: 2px solid transparent;
+    border-radius: 28px;
+
+    text-align: center;
+    color: #304365;
+}
+
+
+/* カードごとの色 */
+.pink {
+    background: #fff0f2;
+    border-color: #ffdee5;
+    --accent: #ff5c85;
+}
+
+.blue {
+    background: #edf7ff;
+    border-color: #d8edff;
+    --accent: #369df5;
+}
+
+.green {
+    background: #e9fbf4;
+    border-color: #d1f5e7;
+    --accent: #32c69a;
+}
+
+.purple {
+    background: #f5efff;
+    border-color: #e9dcff;
+    --accent: #9364f5;
+}
+
+/* 番号 */
+.game-number {
+    align-self: flex-start;
+    display: grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* アイコン */
+.game-icon {
+    width: 90px;
+    height: 90px;
+    margin: -30px 0 20px;
+    color: var(--accent);
+    stroke-width: 2.5;
+}
+
+/* タイトル・説明 */
+.game-card h2 {
+    margin: 0 0 14px;
+    font-size: 30px;
+    white-space: nowrap;
+}
+
+.game-card p {
+    line-height: 1.7;
+}
+
+.catch {
+    margin: 20px 0 0px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #60769c;
+}
+
+.description {
+    min-height: 48px;
+    margin: 0px 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #60769c;
+}
+
+/* ゲーム開始ボタン */
+.game-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 100%;
+    padding: 16px 10px;
+    border: none;
+    border-radius: 30px;
+
+    background: var(--accent);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: filter 0.2s, transform 0.2s;
+}
+
+.game-button:hover {
+    filter: brightness(1.06);
+    transform: scale(1.02);
+}
+
+.game-button i {
+    width: 20px;
+    height: 20px;
+}
+
+/* ベストスコア */
+.best-score {
+    width: 100%;
+    margin: 18px 0 0;
+    padding: 8px 4px;
+
+    border: 2px solid color-mix(in srgb, var(--accent) 20%, white);
+    border-radius: 24px;
+
+    color: #7184a4;
+    font-size: 13px;
+    font-weight: bold;
+}

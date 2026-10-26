@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* ヘッダー */
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 4%;
+}
+
+.logo {
+    display: block;
+    width: auto;
+    height: 70px;
+    max-width: 500px;
+    object-fit: contain;
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 2px solid #d8eaff;
+    border-radius: 30px;
+    background: #ffffffcc;
+    color: #3997ed;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.home-button:hover {
+    background: #eaf5ff;
+    transform: translateY(-2px);
+}
+
+/* タイトル */
+
+.reaction-main {
+    width: 92%;
+    max-width: 1500px;
+    margin: -10px auto 60px;
+}
+
+.game-heading {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 10px;
+}
+
+.game-number {
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3999e8, #2675e8);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#heading-text {
+    margin: 0;
+    font-size: 46px;
+    font-weight: 900;
+}
+
+/* メインレイアウト */
+
+.reaction-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* ゲームエリア */
+
+.reaction-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 460px;
+    padding: 25px;
+    border: 2px solid #d7eaff;
+    border-radius: 26px;
+    background: #eaf5ff;
+    text-align: center;
+}
+
+.reaction-area.end {
+    border-color: #ffdeea;
+    background: #fff0f5;
+}
+
+.reaction-instruction h2 {
+    margin: 0 0 12px;
+    font-size: 40px;
+}
+
+.reaction-instruction p {
+    max-width: 700px;
+    margin: 20px;
+    color: #7b8caf;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+/* スタートボタン */
+
+.start-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    aspect-ratio: 1;
+    border: 10px solid white;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3999e8, #2675e8);
+    box-shadow:
+        0 8px 0 #f6c0d0,
+        0 15px 30px #f6a8c055;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.03s, box-shadow 0.03s;
+}
+
+.start-button span {
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.start-button small {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.start-button:active {
+    transform: translateY(6px) !important;
+    box-shadow: 0 3px 0 #f6c0d0 !important;
+}
+
+.reaction-note {
+    margin: 30px 0 0;
+    color: #8a98b5;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 右側のパネル */
+
+.reaction-sidebar {
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    gap: 20px;
+}
+
+.status-card {
+    padding: 25px;
+    border: 2px solid #d7eaff;
+    border-radius: 26px;
+    background: #eaf5ff;
+}
+
+.status-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.status-heading h2 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.status-icon {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: white;
+}
+
+.status-icon svg {
+    width: 25px;
+    height: 25px;
+    stroke-width: 2.5;
+}
+
+.blue-icon {
+    background: linear-gradient(135deg, #3999e8, #2675e8);
+}
+
+.yellow-icon {
+    background: linear-gradient(135deg, #ffe477, #ffc94b);
+}
+
+/* 測定結果 */
+
+.summary-results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary-item,
+.summary-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 90px;
+    padding: 30px;
+    border-radius: 14px;
+    background: #ffffffb8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.summary-value {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.summary-value strong {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.summary-value small {
+    font-size: 20px;
+}
+
+/* ベストスコア */
+
+.best-card {
+    border-color: #ffedb0;
+    background: #fff9e8;
+}
+
+.best-score {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    margin: 0;
+    padding: 20px 10px;
+    border-radius: 20px;
+    background: #ffffffb8;
+    font-size: 36px;
+    font-weight: 900;
+    font-variant-numeric: tabular-nums;
+}
+
+.best-score small {
+    font-size: 20px;
+}

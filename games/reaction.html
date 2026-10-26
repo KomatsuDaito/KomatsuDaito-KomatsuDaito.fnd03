@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>反射神経測定 | Mini Arcade</title>
+
+    <link rel="stylesheet" href="../css/reaction.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="reaction-page">
+
+    <header class="game-header">
+        <a href="../index.html">
+            <img src="../images/header.png" alt="MINI ARCADE" class="logo">
+        </a>
+
+        <a href="../index.html" class="home-button">
+            <i data-lucide="house"></i>
+            <span>トップへ戻る</span>
+        </a>
+    </header>
+
+    <main class="reaction-main">
+
+        <section class="game-heading">
+
+            <div class="game-number">01</div>
+
+            <div>
+                <h1 id="heading-text">反射神経測定</h1>
+            </div>
+        </section>
+
+        <section class="reaction-layout">
+
+            <!-- ゲームエリア -->
+            <div class="reaction-area default" id="reaction-area">
+
+                <div class="reaction-instruction">
+                    <h2 id="text1">反射神経の限界に挑戦！</h2>
+                    <p id="text2">
+                        スタートを押して、画面が緑色になったら
+                        できるだけ早くクリックしよう！
+                    </p>
+                </div>
+
+                <button id="start-button" class="start-button default">
+                    <span id="text3">START!</span>
+                    <small id="text4">クリックして測定開始</small>
+                </button>
+
+                <p class="reaction-note">
+                    全5回の測定で反応速度をチェック！
+                </p>
+
+            </div>
+
+            <!-- スコア・進行状況 -->
+            <section class="reaction-sidebar">
+
+                <section class="status-card">
+                    <div class="status-heading">
+                        <span class="status-icon pink-icon">
+                            <i data-lucide="timer"></i>
+                        </span>
+                        <h2>測定の進行状況</h2>
+                    </div>
+
+                    <div class="progress-list" id="progress-list">
+                        <div class="progress-item">
+                            <span>1回目</span>
+                            <span class="result-value" id="result1">---</span>
+                            <span>ms</span>
+                        </div>
+                        <div class="progress-item">
+                            <span>2回目</span>
+                            <span class="result-value" id="result2">---</span>
+                            <span>ms</span>
+                        </div>
+                        <div class="progress-item">
+                            <span>3回目</span>
+                            <span class="result-value" id="result3">---</span>
+                            <span>ms</span>
+                        </div>
+                        <div class="progress-item">
+                            <span>4回目</span>
+                            <span class="result-value" id="result4">---</span>
+                            <span>ms</span>
+                        </div>
+                        <div class="progress-item">
+                            <span>5回目</span>
+                            <span class="result-value" id="result5">---</span>
+                            <span>ms</span>
+                        </div>
+                    </div>
+
+                    <div id="summary-results">
+                        <div class="summary-item">
+                            <span>記録(平均)</span>
+                            <strong id="average-result">---</strong>
+                            <span>ms</span>
+                        </div>
+                    </div>
+                </section>
+                <section class="status-card best-card">
+                    <div class="status-heading">
+                        <span class="status-icon yellow-icon">
+                            <i data-lucide="trophy"></i>
+                        </span>
+                        <h2>ベストスコア</h2>
+                    </div>
+
+                    <p class="best-score">
+                        <span id="best-score">---</span>
+                        <small>ms</small>
+                    </p>
+                </section>
+
+            </section>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="../js/reaction.js"></script>
+</body>
+
+</html>

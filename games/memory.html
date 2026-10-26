@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字記憶 | Mini Arcade</title>
+
+    <link rel="stylesheet" href="../css/memory.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="reaction-page">
+
+    <header class="game-header">
+        <a href="../index.html">
+            <img src="../images/header.png" alt="MINI ARCADE" class="logo">
+        </a>
+
+        <a href="../index.html" class="home-button">
+            <i data-lucide="house"></i>
+            <span>トップへ戻る</span>
+        </a>
+    </header>
+
+    <main class="reaction-main">
+
+        <section class="game-heading">
+
+            <div class="game-number">04</div>
+
+            <div>
+                <h1 id="heading-text">数字記憶ゲーム</h1>
+            </div>
+        </section>
+
+        <section class="reaction-layout">
+
+            <!-- ゲームエリア -->
+            <div class="reaction-area default" id="reaction-area">
+
+                <section>
+                    <div class="reaction-instruction">
+                        <h2 id="text1">数字記憶ゲーム！</h2>
+                        <p id="text2">
+                            スタートを押して、できるだけ多くの桁を覚えよう！
+                        </p>
+                    </div>
+
+                    <section class="instruction-card" id="instruction-card">
+                        <div class="game-level">
+                            <span>次のレベル</span>
+                            <div>
+                                <strong id="level">1</strong>
+                            </div>
+                        </div>
+                        <div class="game-keta">
+                            <span>桁数</span>
+                            <div>
+                                <strong id="keta">5</strong>
+                                <small>桁</small>
+                            </div>
+                        </div>
+                        <div class="game-time">
+                            <span>記憶時間</span>
+                            <div>
+                                <strong id="time">5</strong>
+                                <small>秒</small>
+                            </div>
+                        </div>
+                    </section>
+                    <div id="number-box" class="number-box" hidden>
+                        <span id="number">55555</span>
+                    </div>
+
+                    <div class="game-control">
+                        <button id="start-button" class="start-button default">
+                            <span id="text3">START!</span>
+                            <small id="text4">クリックして測定開始</small>
+                        </button>
+
+                        <div id="answer-form" class="answer-form" hidden>
+                            <input id="answer-input" type="text" placeholder="数字を入力してね" autocomplete="off">
+                            <button id="answer-button" class="answer-button">
+                                OK!
+                            </button>
+                        </div>
+                    </div>
+
+
+                </section>
+
+
+            </div>
+
+            <!-- スコア・進行状況 -->
+            <section class="reaction-sidebar">
+
+                <section class="status-card">
+                    <div class="status-heading">
+                        <span class="status-icon blue-icon">
+                            <i data-lucide="timer"></i>
+                        </span>
+                        <h2>測定の進行状況</h2>
+                    </div>
+
+                    <div class="summary-results">
+                        <div class="summary-time">
+                            <span>残り時間</span>
+                            <div class="summary-value">
+                                <strong id="timer">---</strong>
+                                <small>秒</small>
+                            </div>
+                        </div>
+                        <div class="summary-item">
+                            <span>記録</span>
+                            <div class="summary-value">
+                                <small>レベル</small>
+                                <strong id="result">---</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="status-card best-card">
+                    <div class="status-heading">
+                        <span class="status-icon yellow-icon">
+                            <i data-lucide="trophy"></i>
+                        </span>
+                        <h2>ベストスコア</h2>
+                    </div>
+
+                    <p class="best-score">
+                        <small>レベル</small>
+                        <span id="best-score">---</span>
+
+                    </p>
+                </section>
+
+            </section>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="../js/memory.js"></script>
+</body>
+
+</html>
