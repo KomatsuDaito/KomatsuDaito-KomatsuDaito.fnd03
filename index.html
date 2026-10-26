@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--ganbaro-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Mini Arcade</title>
+</head>
+
+<body>
+  <section id="top">
+    <div class="hero">
+      <img src="images/title.png" alt="MINI ARCADE" class="logo">
+      <p class="hero-text">たのしく気軽に、自分の限界に挑戦！</p>
+    </div>
+  </section>
+  <section id="menu">
+    <div class="game-list">
+
+      <div class="game-card pink">
+        <span class="game-number">01</span>
+        <i data-lucide="zap" class="game-icon"></i>
+
+        <h2>反射神経測定</h2>
+        <p class="catch">一瞬の判断がカギ！</p>
+        <p class="description">
+          できるだけ早く反応しよう！
+        </p>
+
+        <button class="game-button" onclick="location.href='games/reaction.html'">
+          ゲームをはじめる
+          <i data-lucide="chevron-right"></i>
+        </button>
+
+        <div class="best-score">
+          <span>👑 ベストスコア：</span>
+          <span id="reactionBestScore">---</span>
+          <span>ms</span>
+        </div>
+      </div>
+      <div class="game-card blue">
+        <span class="game-number">02</span>
+        <i data-lucide="mouse-pointer-click" class="game-icon"></i>
+
+        <h2>連打チャレンジ</h2>
+        <p class="catch">制限時間内にどれだけ</p>
+        <p class="description">クリックできるか挑戦しよう！</p>
+
+        <button class="game-button" onclick="location.href='games/click.html'">
+          ゲームをはじめる
+          <i data-lucide="chevron-right"></i>
+        </button>
+
+        <div class="best-score">
+          <span>👑 ベストスコア：</span>
+          <span id="clickBestScore">---</span>
+          <span>回</span>
+        </div>
+      </div>
+
+      <div class="game-card green">
+        <span class="game-number">03</span>
+        <i data-lucide="timer" class="game-icon"></i>
+
+        <h2>ぴったりストップ</h2>
+        <p class="catch">指定された時間ぴったりを</p>
+        <p class="description">目指してボタンを押そう！</p>
+
+        <button class="game-button" onclick="location.href='games/stop.html'">
+          ゲームをはじめる
+          <i data-lucide="chevron-right"></i>
+        </button>
+
+        <div class="best-score">
+          <span>👑 ベストスコア：</span>
+          <span id="stopBestScore">---</span>
+          <span>秒</span>
+        </div>
+      </div>
+      <div class="game-card purple">
+        <span class="game-number">04</span>
+        <i data-lucide="brain" class="game-icon"></i>
+
+        <h2>数字記憶</h2>
+        <p class="catch">表示された数字を覚えて</p>
+        <p class="description">正しく入力しよう！</p>
+
+        <button class="game-button" onclick="location.href='games/memory.html'">
+          ゲームをはじめる
+          <i data-lucide="chevron-right"></i>
+        </button>
+
+        <div class="best-score">
+          <span>👑 ベストスコア：</span>
+          <span>レベル</span>
+          <span id="memoryBestScore">---</span>
+          
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="js/title.js"></script>
+</body>
+
+</html>
