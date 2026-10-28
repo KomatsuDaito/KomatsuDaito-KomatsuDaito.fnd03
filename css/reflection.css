@@ -64,9 +64,4 @@ h1 {
     background: #369df5;
     color: white;
     font-weight: bold;
-    text-decoration: none;
-}
-
-.back-button:hover {
-    filter: brightness(1.1);
 }
